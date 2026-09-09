@@ -73,11 +73,11 @@ wholeworld = [
           ],
           1600,
           2,
-          "ycz"
+          0,
+          12
         )`,
-  `
-        //scene 1
-        new scene(
+  //scene 1
+  `     new scene(
           [
             new platform(0, 730, 1152, 200, 0, 900, 900, 0, 100, 100),
             new effect(
@@ -99,7 +99,7 @@ wholeworld = [
           ],
           1600,
           2,
-          "ycz"
+          4
         )`,
   ///-------------------------------
   //scene 2
@@ -139,34 +139,38 @@ wholeworld = [
           ],
           2000,
           2,
-          "ycz"
+          -200,4
         )`,
   ///-------------------------------
   //scene 3
-  `new scene(
-          [
-            new door(-200, 201, 0, 1, 1400, 700),
-              new effect(
-              images.bkpat0,
-              0,
-              mh + 50,
-              256,
-              290,
-              "full",
-              0,
-              0,
-              mx,
-              0,
-              9,
-              3
-            ),
-             new effect("rgb(70,185,127,1)",0,mh-300,7000,300),
-            new entity(mx, mh / 2, "01"),
-          ],
-          7000,
-          0,
-          200,
-        )`,
+  new scene(
+    [
+      new effect(
+        images.bkpat0,
+        0,
+        mh + 50,
+        256,
+        290,
+        "full",
+        0,
+        0,
+        mh,
+        0,
+        10,
+        3,
+      ),
+      new effect("rgb(70,185,127,1)", 0, mh - 300, 7000, 300),
+      new door(-100, 351, 2, 0, 1400, 700),
+      new door(-100, 551, 2, 0, 1400, 700),
+      new entity(mx, (mh * 2) / 3, "01"),
+      new platform(0, 216, 7000, 200, 0),
+      new platform(0, 716, 7000, 200, 0),
+    ],
+    5000,
+    0,
+    40,
+    6,
+  ),
 ];
 window.addEventListener("load", (event) => {
   jyM();
