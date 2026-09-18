@@ -66,7 +66,7 @@ wholeworld = [
             ),
               new entity(1150, 661, "02","the forest's east from here"),
               new entity(1500, 661, "03",
-              '   you need an axe to cut\n   the log head to the woods\n   press up when on the\n   path'),
+              ""),
             new door(1900, 400, 1, 0, 200, 730),
 
 
@@ -234,6 +234,8 @@ Promise.allSettled(promises)
               } else {
                 world.entities[seekl - 2].YesDraw = 1;
               }
+
+              world.entities[11].dd = `   you need an axe to cut\n   the log head to the woods\n   press "up" when on the\n   path`;
 
               break;
             case 1:
