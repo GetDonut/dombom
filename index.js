@@ -66,7 +66,7 @@ wholeworld = [
             ),
               new entity(1150, 661, "02","the forest's east from here"),
               new entity(1500, 661, "03",
-              "07"),
+              '   you need an axe to cut\n   the log head to the woods\n   press up when on the\n   path'),
             new door(1900, 400, 1, 0, 200, 730),
 
 
@@ -143,7 +143,7 @@ wholeworld = [
         )`,
   ///-------------------------------
   //scene 3
-  new scene(
+  `new scene(
     [
       new effect(
         images.bkpat0,
@@ -163,14 +163,14 @@ wholeworld = [
       new door(-100, 351, 2, 0, 1400, 700),
       new door(-100, 551, 2, 0, 1400, 700),
       new entity(mx, (mh * 2) / 3, "01"),
-      new platform(0, 216, 7000, 200, 0),
-      new platform(0, 716, 7000, 200, 0),
+      new platform(0, 216, 7000, 200, 0, 0, 0, 200, 200),
+      new platform(0, 716, 7000, 200, 0, 0, 0, 200, 200),
     ],
     5000,
     0,
     40,
     6,
-  ),
+  )`,
 ];
 window.addEventListener("load", (event) => {
   jyM();
@@ -234,8 +234,6 @@ Promise.allSettled(promises)
               } else {
                 world.entities[seekl - 2].YesDraw = 1;
               }
-
-              world.entities[11].dd = `   you need an axe to cut\n   the log head to the woods\n   press "up" when on the\n   path`;
 
               break;
             case 1:
