@@ -1,3 +1,6 @@
+//puts a guy out there dude its player no.1 or Pp1
+PlayerBase.push(new Player(3));
+//
 wholeworld = [
   //scene 0
   `new scene(
@@ -121,7 +124,7 @@ wholeworld = [
             ),
             new platform(-200, 750, 2500, 200, 0, 800, 800),
             new door(-200, 500, 0, 0, 1400, 700),
-            new door(2000, 500, 3, 0, 100, 500),
+            new door(2000, 500, 3, 0, 200, 700),
             new effect(
               images.bkpatAmb,
               0,
@@ -139,11 +142,11 @@ wholeworld = [
           ],
           2000,
           2,
-          -200,4
+          -2000,4
         )`,
   ///-------------------------------
   //scene 3
-  new scene(
+  ` new scene(
     [
       new effect(
         images.bkpat02,
@@ -203,21 +206,47 @@ wholeworld = [
         10,
         2,
       ),
-      new effect("rgba(36, 87, 68, 1)", 0, mh - 400, 7000, 100),
-      new effect("rgba(0, 185, 126,1)", 0, mh - 300, 7000, 500),
+      new effect("rgba(0, 185, 126,1)", 0, 300, 7000, 800),
 
       new door(-100, 351, 2, 0, 1400, 700),
       new door(-100, 551, 2, 0, 1400, 700),
 
-      new platform(0, mh - 400, 7000, 100, 0, 256, 128, 64, 100),
+      new effect(
+        images.rabbit,
+        1185,
+        520,
+        70,
+        110,
+        "full",
+        530,
+        0,
+        0,
+        0,
+        4,
+        1.5,
+      ),
+
+      new platform(0, 240, 1200 * 3, 100, 0, 448, 448, 100, 100),
+      new platform(-50, 270, 1200 * 3, 100, 0, 448, 448, 100, 100),
+      new platform(0, 300, 1200 * 3, 100, 0, 448, 448, 100, 100),
+
+      new platform(-50, 330, 1200, 100, 0, 448, 448, 100, 100),
+      new platform(0, 350, 1200, 100, 0, 448, 448, 100, 100),
+      new platform(-50, 370, 1200, 100, 0, 448, 448, 100, 100),
+      //
+      new platform(1500, 330, 1200 * 2, 100, 0, 448, 448, 100, 100),
+      new platform(1450, 350, 1200 * 2, 100, 0, 448, 448, 100, 100),
+      new platform(1500, 370, 1200 * 2, 100, 0, 448, 448, 100, 100),
+
       new platform(0, 816, 7000, 100, 0),
-      new entity(mx, (mh * 2) / 3, "01"),
+      new entity(900, 700, "01"),
     ],
     5000,
     0,
     40,
-    10,
-  ),
+    17,
+  )`,
+  ,
 ];
 window.addEventListener("load", (event) => {
   jyM();
